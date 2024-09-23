@@ -11,11 +11,31 @@ highestAverage function to solve the problem.
 */
 
 function getAverage(nums) {
-  // Your code here 
-}
+  if (nums.length === 0) {
+    return 0;
+  
+  }
 
+  let sum = 0;
+  for (let i = 0; i<nums.length; i++) {
+    sum += nums[i];
+  }
+  
+  return sum / nums.length;
+}
 function highestAverage(numsList) {
-  // Your code here 
+  let maxIndex = 0;
+  let maxAverage = getAverage(numsList[0]);
+
+  for (let i = 1; i < numsList.length; i++) {
+    let currentAverage = getAverage(numsList[i]);
+
+    if (currentAverage > maxAverage) {
+      maxAverage = currentAverage;
+      maxIndex = i;
+    }
+  }
+  return maxIndex;
 }
 
 // const arrayA = [1, 2, 3, 4, 5];

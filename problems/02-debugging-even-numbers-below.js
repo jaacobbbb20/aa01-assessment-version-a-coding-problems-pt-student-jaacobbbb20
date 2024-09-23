@@ -7,8 +7,10 @@ working correctly. Help them fix it!
 
 function evenNumbersBelow(num) {
   let arr = [];
-  for (let i = -1 ; i <= num ; i += 2) {
-    arr.unshift(i);
+  for (let i = 0; i < num; i++) {
+    if (i % 2 === 0) {
+    arr.push(i);
+    }
   }
   return arr;
 }

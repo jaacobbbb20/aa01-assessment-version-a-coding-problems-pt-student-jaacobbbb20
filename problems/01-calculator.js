@@ -8,7 +8,18 @@ If the operator is invalid, return the string "Invalid Operator".
 */
 
 function calculator(num1, operator, num2) {
-  // Your code here 
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    case '/':
+      return num1 / num2;
+    default:
+      return "Invalid Operator";
+  }
 }
 
 // console.log(calculator(123, "+", 456)); // 579
